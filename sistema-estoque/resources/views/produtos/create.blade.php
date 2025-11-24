@@ -27,17 +27,21 @@
 
             <div class="form-group">
                 <label>Categorias</label>
-                <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 5px;">
+
+                <div class="categories-container">
                     @foreach($categorias as $categoria)
-                    <div style="display: flex; align-items: center; gap: 5px;">
-                        <input type="checkbox" name="categorias[]" value="{{ $categoria->id }}" id="cat-{{ $categoria->id }}" style="width: auto;">
-                        <label for="cat-{{ $categoria->id }}" style="margin: 0; font-weight: normal;">{{ $categoria->nome }}</label>
+                    <div class="category-item">
+                        <input type="checkbox" name="categorias[]" value="{{ $categoria->id }}" id="cat-{{ $categoria->id }}">
+                        <label for="cat-{{ $categoria->id }}">{{ $categoria->nome }}</label>
                     </div>
                     @endforeach
+
+                    @if($categorias->isEmpty())
+                    <small class="sem-categoria">
+                        Nenhuma categoria encontrada. <a href="{{ route('categorias.create') }}">Criar uma?</a>
+                    </small>
+                    @endif
                 </div>
-                @if($categorias->isEmpty())
-                <small style="color: #666;">Nenhuma categoria cadastrada. <a href="{{ route('categorias.create') }}">Criar uma?</a></small>
-                @endif
             </div>
 
             <div class="form-group">

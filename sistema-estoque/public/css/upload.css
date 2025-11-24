@@ -33,7 +33,8 @@ label {
 }
 
 input[type="text"],
-input[type="file"] {
+input[type="file"],
+input[type="number"] {
     width: 100%;
     padding: 0.75rem;
     border: 1px solid #d1d5db;
@@ -79,6 +80,56 @@ input[type="file"] {
     margin-top: 0.25rem;
 }
 
+.categories-container {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    background-color: #fff;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    min-height: 45px;
+}
+
+.category-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: #f3f4f6;
+    padding: 5px 10px;
+    border-radius: 4px;
+    border: 1px solid #e5e7eb;
+    transition: background-color 0.2s;
+}
+
+.category-item:hover {
+    background-color: #e5e7eb;
+}
+
+.category-item input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+    cursor: pointer;
+    border-color: #d1d5db;
+}
+
+.category-item label {
+    margin: 0;
+    font-weight: normal;
+    font-size: 0.95rem;
+    cursor: pointer;
+    color: #374151;
+}
+
+.sem-categoria {
+    color: #666;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+}
+
 /* --- MODO ESCURO --- */
 
 body.dark-mode {
@@ -99,7 +150,8 @@ body.dark-mode label {
 }
 
 body.dark-mode input[type="text"],
-body.dark-mode input[type="file"] {
+body.dark-mode input[type="file"],
+body.dark-mode input[type="number"] {
     background-color: #374151;
     border-color: #4b5563;
     color: white;
@@ -111,4 +163,22 @@ body.dark-mode .btn-voltar {
 
 body.dark-mode .btn-voltar:hover {
     color: white;
+}
+
+body.dark-mode .categories-container {
+    background-color: #374151;
+    border-color: #4b5563;
+}
+
+body.dark-mode .category-item {
+    background-color: #4b5563;
+    border-color: #6b7280;
+}
+
+body.dark-mode .category-item:hover {
+    background-color: #6b7280;
+}
+
+body.dark-mode .category-item label {
+    color: #e5e7eb;
 }
