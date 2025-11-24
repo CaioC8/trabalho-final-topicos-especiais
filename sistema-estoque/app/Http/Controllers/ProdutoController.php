@@ -27,7 +27,7 @@ class ProdutoController extends Controller
         $request->validate([
             'nome' => 'required|string|max:255',
             'preco' => 'required|numeric|min:0',
-            'foto' => 'required|image|mimes:jpeg,png,jpg|max:2048',
+            'foto' => 'required|image|mimes:jpeg,png,jpg|max:20480',
             'categorias' => 'nullable|array',
             'categorias.*' => 'exists:categorias,id'
         ]);
@@ -76,7 +76,7 @@ class ProdutoController extends Controller
         $request->validate([
             'nome' => 'required|string|max:255',
             'preco' => 'required|numeric|min:0',
-            'foto' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
+            'foto' => 'nullable|image|mimes:jpeg,png,jpg|max:20480',
             'categorias' => 'nullable|array',
             'categorias.*' => 'exists:categorias,id'
         ]);

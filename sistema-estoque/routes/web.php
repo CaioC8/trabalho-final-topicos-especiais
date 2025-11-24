@@ -1,26 +1,31 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\FotoController;
+use App\Http\Controllers\ProdutoController;
+use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\TemaController;
 use App\Http\Controllers\PerfilController;
 
 Route::get('/', function () {
-    return redirect()->route('fotos.index');
+    return redirect()->route('produtos.index');
 });
 
 Route::get('/cadastro', [UsuarioController::class, 'create'])->name('cadastro.create');
 Route::post('/cadastro', [UsuarioController::class, 'store'])->name('cadastro.store');
 
 Route::get('/login', [LoginController::class, 'index'])->name('login');
+
 Route::post('/login', [LoginController::class, 'login'])->name('login.submit');
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('/', [FotoController::class, 'index'])->name('fotos.index');
-    Route::resource('fotos', FotoController::class)->except(['index', 'show']);
+    Route::get('/', [ProdutoController::class, 'index'])->name('produtos.index');
+    Route::resource('produtos', ProdutoController::class)->except(['index', 'show']);
+
+    Route::get('/categorias/criar', [CategoriaController::class, 'create'])->name('categorias.create');
+    Route::post('/categorias', [CategoriaController::class, 'store'])->name('categorias.store');
 
     Route::get('/alternar-tema', [TemaController::class, 'alternar'])->name('tema.alternar');
 
