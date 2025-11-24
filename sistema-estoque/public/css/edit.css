@@ -1,0 +1,126 @@
+body {
+    font-family: "Segoe UI", sans-serif;
+    background-color: #f3f4f6;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.edit-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+h2 {
+    color: #1f2937;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #4b5563;
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="file"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+/* Estilo para a pré-visualização da imagem atual */
+.img-preview {
+    display: block;
+    width: 150px;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    padding: 2px;
+}
+
+.btn-atualizar {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #f59e0b; /* Laranja para indicar Edição */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.btn-atualizar:hover {
+    background-color: #d97706;
+}
+
+.btn-voltar {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    color: #6b7280;
+    text-decoration: none;
+}
+
+.btn-voltar:hover {
+    color: #1f2937;
+}
+
+.error {
+    color: #ef4444;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+/* --- MODO ESCURO --- */
+
+body.dark-mode {
+    background-color: #111827;
+}
+
+body.dark-mode .edit-container {
+    background-color: #1f2937;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode h2 {
+    color: #f3f4f6;
+}
+
+body.dark-mode label {
+    color: #d1d5db;
+}
+
+body.dark-mode input[type="text"],
+body.dark-mode input[type="file"] {
+    background-color: #374151;
+    border-color: #4b5563;
+    color: white;
+}
+
+body.dark-mode .img-preview {
+    border-color: #4b5563;
+}
+
+body.dark-mode .btn-voltar {
+    color: #9ca3af;
+}
+
+body.dark-mode .btn-voltar:hover {
+    color: white;
+}
