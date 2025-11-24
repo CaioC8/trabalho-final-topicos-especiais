@@ -1,16 +1,15 @@
-version: '3.8'
+version: "3.8"
 
 services:
-  # Serviço do Banco de Dados
   db:
     image: postgres:15
     container_name: galeria_postgres
     ports:
-      - "5432:5432" 
+      - "${DB_PORT}:5432"
     environment:
-      POSTGRES_DB: galeria_db
-      POSTGRES_USER: usuario_galeria
-      POSTGRES_PASSWORD: senha_secreta
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
     volumes:
       - db_data:/var/lib/postgresql/data
 
