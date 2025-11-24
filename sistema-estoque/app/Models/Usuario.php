@@ -36,8 +36,8 @@ class Usuario extends Authenticatable
         ];
     }
 
-    public function fotos()
+    public function produtos()
     {
-        return $this->hasMany(Foto::class, 'usuario_id');
+        return $this->hasMany(Produto::class);
     }
 }
