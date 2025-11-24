@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Usuario;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
 
 class UsuarioController extends Controller
 {
@@ -18,8 +17,8 @@ class UsuarioController extends Controller
     {
         $request->validate([
             'nome' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:usuarios',
-            'senha' => 'required|string|min:6|confirmed',
+            'email' => 'required|email|unique:usuarios,email',
+            'senha' => 'required|string|min:6',
         ]);
 
         $usuario = Usuario::create([
@@ -30,7 +29,6 @@ class UsuarioController extends Controller
 
         Auth::login($usuario);
 
-        return redirect()->route('fotos.index')
-            ->with('sucesso', 'Cadastro realizado com sucesso! Bem-vindo(a).');
+        return redirect()->route('produtos.index');
     }
 }
