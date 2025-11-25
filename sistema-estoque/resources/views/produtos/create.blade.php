@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Novo Produto</title>
-    <link rel="stylesheet" href="{{ asset('css/upload.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/produtos/create.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/gerais.css') }}">
 </head>
 
 <body class="{{ \Illuminate\Support\Facades\Cookie::get('tema') === 'escuro' ? 'dark-mode' : '' }}">

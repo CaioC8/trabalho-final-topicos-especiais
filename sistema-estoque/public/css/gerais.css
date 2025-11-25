@@ -1,0 +1,63 @@
+body {
+    font-family: sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 20px;
+}
+
+.alert {
+    padding: 15px;
+    background-color: #d1fae5;
+    color: #065f46;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.error {
+    color: #ef4444;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+input[type="text"],
+input[type="file"],
+input[type="number"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+input[type="file"] {
+    background-color: #f9fafb;
+}
+
+body.dark-mode {
+    background-color: #111827;
+}
+
+body.dark-mode .btn-voltar {
+    color: #9ca3af;
+}
+
+body.dark-mode .btn-voltar:hover {
+    color: white;
+}
+
+body.dark-mode input[type="text"],
+body.dark-mode input[type="file"],
+body.dark-mode input[type="number"] {
+    background-color: #374151;
+    border-color: #4b5563;
+    color: white;
+}
+
+body.dark-mode h2 {
+    color: #f3f4f6;
+}
+
+body.dark-mode label {
+    color: #d1d5db;
+}

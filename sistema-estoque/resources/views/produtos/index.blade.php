@@ -5,41 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meus Produtos</title>
-    <link rel="stylesheet" href="{{ asset('css/galeria.css') }}">
-    <style>
-        .card-price {
-            color: #2563eb;
-            font-weight: bold;
-            font-size: 1.1rem;
-            margin: 5px 0;
-        }
-
-        .badge-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 5px;
-            margin-bottom: 10px;
-        }
-
-        .badge {
-            background: #e5e7eb;
-            color: #374151;
-            padding: 2px 8px;
-            border-radius: 12px;
-            font-size: 0.75rem;
-        }
-
-        body.dark-mode .badge {
-            background: #374151;
-            color: #e5e7eb;
-        }
-
-        .btn-cat {
-            background-color: #8b5cf6;
-        }
-
-        /* Roxo para categorias */
-    </style>
+    <link rel="stylesheet" href="{{ asset('css/produtos/index.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/gerais.css') }}">
 </head>
 
 <body class="{{ \Illuminate\Support\Facades\Cookie::get('tema') === 'escuro' ? 'dark-mode' : '' }}">
@@ -54,12 +21,12 @@
             <small>Olá, <a href="{{ route('perfil.index') }}" style="color: inherit; font-weight: bold;">{{ Auth::user()->nome }}</a></small>
         </div>
 
-        <div style="display: flex; gap: 10px; align-items: center;">
+        <nav>
             <a href="{{ route('tema.alternar') }}" class="btn-trocar-tema" title="Alternar Tema">
                 <div></div>
             </a>
 
-            <a href="{{ route('categorias.create') }}" class="btn btn-cat" style="font-size:0.8rem;">+ Categoria</a>
+            <a href="{{ route('categorias.create') }}" class="btn btn-cat">+ Categoria</a>
 
             <a href="{{ route('produtos.create') }}" class="btn btn-add">+ Novo Produto</a>
 
@@ -67,10 +34,10 @@
                 @csrf
                 <button type="submit" class="btn btn-sair">Sair</button>
             </form>
-        </div>
+        </nav>
     </header>
 
-    <main class="galeria-container">
+    <main class="produtos-container">
         @forelse($produtos as $produto)
         <div class="card">
             <img src="{{ asset('storage/' . $produto->foto) }}" alt="{{ $produto->nome }}" class="card-img">

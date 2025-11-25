@@ -5,16 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nova Categoria</title>
-    <link rel="stylesheet" href="{{ asset('css/upload.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/categorias/create.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/gerais.css') }}">
 </head>
 
 <body class="{{ \Illuminate\Support\Facades\Cookie::get('tema') === 'escuro' ? 'dark-mode' : '' }}">
-    <div class="upload-container" style="max-width: 400px;">
-        <h2>Nova Categoria</h2>
+    @if(session('sucesso'))
+    <p class="alert">{{ session('sucesso') }}</p>
+    @endif
 
-        @if(session('sucesso'))
-        <p style="color: green; text-align: center;">{{ session('sucesso') }}</p>
-        @endif
+    <div class="form">
+        <h2>Nova Categoria</h2>
 
         <form action="{{ route('categorias.store') }}" method="POST">
             @csrf

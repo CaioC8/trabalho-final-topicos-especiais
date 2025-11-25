@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Usuário - Galeria</title>
-    <link rel="stylesheet" href="{{ asset('css/cadastro.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/usuarios/create.css') }}">
 </head>
 
 <body class="{{ \Illuminate\Support\Facades\Cookie::get('tema') === 'escuro' ? 'dark-mode' : '' }}">

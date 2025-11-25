@@ -1,5 +1,4 @@
 body {
-    font-family: "Segoe UI", sans-serif;
     background-color: #f3f4f6;
     display: flex;
     justify-content: center;
@@ -30,20 +29,6 @@ label {
     margin-bottom: 0.5rem;
     color: #4b5563;
     font-weight: 600;
-}
-
-input[type="text"],
-input[type="file"],
-input[type="number"] {
-    width: 100%;
-    padding: 0.75rem;
-    border: 1px solid #d1d5db;
-    border-radius: 6px;
-    box-sizing: border-box;
-}
-
-input[type="file"] {
-    background-color: #f9fafb;
 }
 
 .btn-salvar {
@@ -139,22 +124,6 @@ body.dark-mode {
 body.dark-mode .upload-container {
     background-color: #1f2937;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-}
-
-body.dark-mode h2 {
-    color: #f3f4f6;
-}
-
-body.dark-mode label {
-    color: #d1d5db;
-}
-
-body.dark-mode input[type="text"],
-body.dark-mode input[type="file"],
-body.dark-mode input[type="number"] {
-    background-color: #374151;
-    border-color: #4b5563;
-    color: white;
 }
 
 body.dark-mode .btn-voltar {

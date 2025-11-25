@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Perfil - Galeria</title>
-    <link rel="stylesheet" href="{{ asset('css/perfil.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/perfil/index.css') }}">
 </head>
 
 <body class="{{ \Illuminate\Support\Facades\Cookie::get('tema') === 'escuro' ? 'dark-mode' : '' }}">
@@ -55,7 +55,7 @@
             <button type="submit" class="btn-salvar">Salvar Alterações</button>
         </form>
 
-        <a href="{{ route('fotos.index') }}" class="btn-voltar">← Voltar para a Galeria</a>
+        <a href="{{ route('produtos.index') }}" class="btn-voltar">← Voltar para o Estoque</a>
 
         <hr>
 
