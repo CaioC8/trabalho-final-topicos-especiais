@@ -24,8 +24,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/', [ProdutoController::class, 'index'])->name('produtos.index');
     Route::resource('produtos', ProdutoController::class)->except(['index', 'show']);
 
-    Route::get('/categorias/criar', [CategoriaController::class, 'create'])->name('categorias.create');
-    Route::post('/categorias', [CategoriaController::class, 'store'])->name('categorias.store');
+    Route::resource('categorias', CategoriaController::class)->except(['show']);
 
     Route::get('/alternar-tema', [TemaController::class, 'alternar'])->name('tema.alternar');
 

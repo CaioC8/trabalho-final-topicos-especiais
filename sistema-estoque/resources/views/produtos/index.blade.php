@@ -26,7 +26,7 @@
                 <div></div>
             </a>
 
-            <a href="{{ route('categorias.create') }}" class="btn btn-cat">+ Categoria</a>
+            <a href="{{ route('categorias.index') }}" class="btn btn-cat">Gerenciar Categorias</a>
 
             <a href="{{ route('produtos.create') }}" class="btn btn-add">+ Novo Produto</a>
 

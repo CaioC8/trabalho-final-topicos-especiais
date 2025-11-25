@@ -1,0 +1,238 @@
+body {
+    font-family: sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 15px 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+h1 {
+    margin: 0;
+    color: #333;
+}
+
+/* --- Botões Gerais --- */
+.btn {
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-add {
+    background-color: #3b82f6;
+}
+
+.btn-sair {
+    background-color: #ef4444;
+}
+
+.btn-edit {
+    background-color: #f59e0b;
+    font-size: 0.9rem;
+    margin-right: 5px;
+}
+
+.btn-del {
+    background-color: #ef4444;
+    font-size: 0.9rem;
+}
+
+/* Modificador para botões pequenos (usado na tabela) */
+.btn-sm {
+    padding: 5px 10px;
+    font-size: 0.85rem;
+}
+
+/* --- Cards (Tela Principal) --- */
+.galeria-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    margin: 0 0 10px 0;
+    color: #1f2937;
+}
+
+.card-date {
+    font-size: 0.8rem;
+    color: #6b7280;
+    margin-bottom: 15px;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+/* --- Tabela de Categorias --- */
+.tabela-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+tr {
+    border-bottom: 1px solid #e5e7eb;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f9fafb;
+    color: #374151;
+}
+
+.actions-cell {
+    display: flex;
+    gap: 10px;
+}
+
+/* --- Utilitários --- */
+.alert {
+    padding: 15px;
+    background-color: #d1fae5;
+    color: #065f46;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.btn-trocar-tema {
+    display: block;
+    width: 60px;
+    height: 30px;
+    background-color: #ccc;
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-right: 15px;
+}
+
+.btn-trocar-tema div {
+    width: 26px;
+    height: 26px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* --- MODO ESCURO --- */
+
+body.dark-mode {
+    background-color: #111827;
+    color: #f3f4f6;
+}
+
+body.dark-mode header {
+    background-color: #1f2937;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode h1 {
+    color: #f3f4f6;
+}
+
+/* Cards Dark Mode */
+body.dark-mode .card {
+    background-color: #1f2937;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .card-title {
+    color: #e5e7eb;
+}
+
+body.dark-mode .card-date {
+    color: #9ca3af;
+}
+
+/* Tabela Dark Mode */
+body.dark-mode .tabela-container {
+    background-color: #1f2937;
+}
+
+body.dark-mode th {
+    background-color: #374151;
+    color: #e5e7eb;
+    border-bottom-color: #4b5563;
+}
+
+body.dark-mode tr {
+    border-bottom-color: #4b5563;
+}
+
+body.dark-mode td {
+    color: #d1d5db;
+}
+
+/* Botão Tema Dark Mode */
+body.dark-mode .btn-trocar-tema {
+    background-color: #3b82f6;
+}
+
+body.dark-mode .btn-trocar-tema div {
+    transform: translateX(30px);
+}
