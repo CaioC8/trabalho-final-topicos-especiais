@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Cookie; // Importante importar o Facade Cookie
+use Illuminate\Support\Facades\Cookie;
 
 class TemaController extends Controller
 {
